@@ -49,7 +49,7 @@ console.log(panic("winter is coming"))
 //     }
 //     array.push('!')
 //     string=array.join(' ')
-//     return string
+//     return string.toUpperCase()
 // }
 
 // // Test your function
