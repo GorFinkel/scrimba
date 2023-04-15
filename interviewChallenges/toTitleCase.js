@@ -16,23 +16,47 @@ Hint: Trying using slice() and .toUpperCase()
 */
 
 function capitalizeWord(word){
-    return word.slice(0,1).toUpperCase()+word.slice(1)
+    return word[0].toUpperCase() + word.slice(1);
 }
 
-/* 
-Now write a function that capitalizes every word in a sentence. 
-How can you reuse the function you just wrote? 
-*/ 
-
 function toTitleCase(str){
-    let arr=str.split(' ')
-    for (let index in arr){
-        arr[index]=capitalizeWord(arr[index])
-        console.log(arr[index])
-    }
-    return arr.join(' ')
+    // split sentence into an array of words
+    const sentenceArr = str.split(' ');
+    // loop through the arrays of words and capitalizeWord func on each word
+    const capArr = sentenceArr.map(word => capitalizeWord(word));
+    // join sentence arr back into a string
+    return capArr.join(' ');
 }
 
 // Test your functions
 console.log(capitalizeWord("pumpkin"));
 console.log(toTitleCase("pumpkin pranced purposefully across the pond"));
+
+
+
+
+
+
+
+
+// function capitalizeWord(word){
+//     return word.slice(0,1).toUpperCase()+word.slice(1)
+// }
+
+// /* 
+// Now write a function that capitalizes every word in a sentence. 
+// How can you reuse the function you just wrote? 
+// */ 
+
+// function toTitleCase(str){
+//     let arr=str.split(' ')
+//     for (let index in arr){
+//         arr[index]=capitalizeWord(arr[index])
+//         console.log(arr[index])
+//     }
+//     return arr.join(' ')
+// }
+
+// // Test your functions
+// console.log(capitalizeWord("pumpkin"));
+// console.log(toTitleCase("pumpkin pranced purposefully across the pond"));
